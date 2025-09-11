@@ -32,7 +32,7 @@ public class MeteorController : PoolObject
 
     void FixedUpdate()
     {
-        _rigidbody.velocity = transform.forward * _speed;
+        _rigidbody.linearVelocity = transform.forward * _speed;
     }
 
     private void InvokeDespawnAfterDelay()
