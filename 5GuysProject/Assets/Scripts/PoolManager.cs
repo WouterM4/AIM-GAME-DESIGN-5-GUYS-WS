@@ -1,31 +1,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PoolManager<T> : MonoBehaviour where T : PoolObject<T>
+public class PoolManager : MonoBehaviour
 {
-    [SerializeField] private T prefab;
-    private readonly Queue<T> _pool = new();
+    [SerializeField] private MeteorController prefab;
+    private readonly Queue<MeteorController> _pool = new();
     
     private void CreateNewObject()
     {
-        var obj = Instantiate(prefab, transform);
+        var obj = Instantiate(prefab);
         obj.InitPoolObject(this);
         obj.gameObject.SetActive(false);
         _pool.Enqueue(obj);
     }
     
-    public T RequestObject()
+    public MeteorController RequestObject()
     {
         if (_pool.Count == 0)
         {
             CreateNewObject();
         }
-        T obj = _pool.Dequeue();
+        var obj = _pool.Dequeue();
         obj.gameObject.SetActive(true);
         return obj;
     }
 
-    public void ReturnToPool(T obj)
+    public void ReturnToPool(MeteorController obj)
     {
         obj.gameObject.SetActive(false);
         _pool.Enqueue(obj);

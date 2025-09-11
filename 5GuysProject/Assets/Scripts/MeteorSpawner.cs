@@ -4,9 +4,9 @@ using UnityEngine;
 public class MeteorSpawner : MonoBehaviour
 {
     [SerializeField] private MeteorController meteorPrefab;
-    [SerializeField] private PoolManager<MeteorController> poolManager;
-    [SerializeField] private float spawnCooldown = 1;
-    [SerializeField] private float maxSpawnTime = 5;
+    [SerializeField] private PoolManager poolManager;
+    [SerializeField] private float spawnCooldown = 0.5f;
+    [SerializeField] private float maxSpawnTime = 2;
     [SerializeField] private float minSpawnDistance = 5f;
     [SerializeField] private float maxSpawnDistance = 15f;
     //CHATGPT VARIABLE
@@ -28,6 +28,8 @@ public class MeteorSpawner : MonoBehaviour
             
             meteor.transform.position = spawnPosition;
             
+            meteor.transform.LookAt(transform);
+
             meteor.Initialize((spawnPosition - transform.position).normalized);
             
             yield return new WaitForSeconds(Random.Range(spawnCooldown, maxSpawnTime));
