@@ -17,6 +17,7 @@ public class MeteorController : PoolObject<MeteorController>
     
     void Start()
     {
+        _rigidbody = GetComponent<Rigidbody>();
         InvokeDespawnAfterDelay();
     }
 
@@ -27,7 +28,6 @@ public class MeteorController : PoolObject<MeteorController>
         
         _speed = Random.Range(minSpeed, maxSpeed);
         
-        _rigidbody = GetComponent<Rigidbody>();
     }
 
     private void FixedUpdate()
