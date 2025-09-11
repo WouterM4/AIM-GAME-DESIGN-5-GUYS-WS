@@ -21,7 +21,7 @@ public class SpaceshipController : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.AddForce(0, 0, forwardMovementSpeed * Time.deltaTime);
+        rb.AddForce(transform.forward *    forwardMovementSpeed * Time.deltaTime);
         Quaternion deltaRotation = Quaternion.Euler(new Vector3(verticalRotation, horizontalRotation, 0) * turnSpeed * Time.deltaTime);
         rb.MoveRotation(rb.rotation * deltaRotation);
     }
