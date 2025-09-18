@@ -5,6 +5,8 @@ public class PlayerController : MonoBehaviour
 {
     public float movementSpeed = 100;
     public float rotationSpeed = 100;
+    public Camera playerCamera;
+    private Vector3 cameraOffset;
     private Rigidbody rb;
     private float movement;
     private Vector3 rotation;
@@ -13,12 +15,13 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        cameraOffset = playerCamera.transform.position - transform.position;
     }
 
     private void FixedUpdate()
     {
-        rb.AddForce(movementSpeed * Time.deltaTime * movement * transform.forward);
-        rb.MoveRotation(transform.rotation * Quaternion.Euler(rotationSpeed * Time.deltaTime * rotation));
+        rb.AddForce(movementSpeed * Time.deltaTime * movement * playerCamera.transform.forward);
+        playerCamera.transform.rotation = (playerCamera.transform.rotation * Quaternion.Euler(rotationSpeed * Time.deltaTime * rotation));
     }
 
     void OnMove(InputValue movementValue)
@@ -26,5 +29,10 @@ public class PlayerController : MonoBehaviour
         Vector2 movementVector = movementValue.Get<Vector2>();
         movement = movementVector.y;
         rotation = new Vector3(0, movementVector.x, 0);
+    }
+    
+    void LateUpdate()
+    {
+        playerCamera.transform.position = transform.position + cameraOffset;
     }
 }
