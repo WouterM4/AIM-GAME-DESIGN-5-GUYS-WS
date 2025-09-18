@@ -21,7 +21,8 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         rb.AddForce(movementSpeed * Time.deltaTime * movement * playerCamera.transform.forward);
-        playerCamera.transform.rotation = (playerCamera.transform.rotation * Quaternion.Euler(rotationSpeed * Time.deltaTime * rotation));
+        playerCamera.transform.LookAt(transform);
+        playerCamera.transform.RotateAround(transform.position, Vector3.up, rotationSpeed * Time.deltaTime * rotation.y);
     }
 
     void OnMove(InputValue movementValue)
@@ -29,10 +30,5 @@ public class PlayerController : MonoBehaviour
         Vector2 movementVector = movementValue.Get<Vector2>();
         movement = movementVector.y;
         rotation = new Vector3(0, movementVector.x, 0);
-    }
-    
-    void LateUpdate()
-    {
-        playerCamera.transform.position = transform.position + cameraOffset;
     }
 }
