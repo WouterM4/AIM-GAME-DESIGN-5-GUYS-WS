@@ -9,27 +9,16 @@ public class PlayerController : MonoBehaviour
     private Vector3 desiredLocation;
     private Rigidbody rb;
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     { 
         rb = GetComponent<Rigidbody>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
     void FixedUpdate()
     {
         if (transform.position != desiredLocation)
         {
-            rb.MovePosition(Time.fixedDeltaTime * movementSpeed * desiredLocation.normalized);
-        }
-        else
-        {
-            desiredLocation = transform.position;
+            rb.MovePosition(Vector3.MoveTowards(transform.position, desiredLocation, movementSpeed * Time.fixedDeltaTime));
         }
     }
 
