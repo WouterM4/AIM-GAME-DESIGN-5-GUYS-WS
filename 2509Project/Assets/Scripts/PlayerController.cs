@@ -25,11 +25,7 @@ public class PlayerController : MonoBehaviour
     {
         if (transform.position != desiredLocation)
         {
-            rb.MovePosition(Time.fixedDeltaTime * movementSpeed * desiredLocation.normalized);
-        }
-        else
-        {
-            desiredLocation = transform.position;
+            rb.MovePosition(Vector3.MoveTowards(transform.position, desiredLocation, movementSpeed * Time.fixedDeltaTime));
         }
     }
 
