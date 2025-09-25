@@ -11,19 +11,12 @@ public class PlayerController : MonoBehaviour
     private Vector3 desiredLocation;
     private Rigidbody rb;
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     { 
         currentHP = maxHP;
         rb = GetComponent<Rigidbody>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
     void FixedUpdate()
     {
         if (transform.position != desiredLocation)
