@@ -6,11 +6,12 @@ public class FillCauldron : MonoBehaviour
     private int amountOfItemsCollected;
     public int totalItems;
     public GameObject potion;
-    //public static event Action<PickableItem> OnInteract;
+    public static event Action<PickableItem> OnInteract;
     
     private void Start()
     {
         amountOfItemsCollected = 0;
+        OnInteract += AddItemToCauldron;
     }
 
     void AddItemToCauldron(PickableItem item)
