@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -10,12 +11,16 @@ public class PlayerController : MonoBehaviour
     private Vector2 mousePosition;
     private Vector3 desiredLocation;
     private Rigidbody rb;
+    private MeshRenderer _meshRenderer;
+    private Color originalColor;
     
     void Start()
     { 
         currentHP = maxHP;
         rb = GetComponent<Rigidbody>();
         desiredLocation = new Vector3(transform.position.x, 1, transform.position.z);
+        _meshRenderer = GetComponent<MeshRenderer>();
+        originalColor = _meshRenderer.material.color;
     }
     
     void FixedUpdate()
@@ -40,5 +45,27 @@ public class PlayerController : MonoBehaviour
     void OnLook(InputValue value)
     {
         mousePosition = value.Get<Vector2>();
+    }
+
+    public void TakeDamage(float damage)
+    {
+        currentHP -= damage;
+        StartCoroutine(FlashRed());
+
+        if (currentHP > 0f) return;
+        Die();
+    }
+
+    private void Die()
+    {
+        Debug.Log("Player died!");
+        Destroy(gameObject);
+    }
+
+    private IEnumerator FlashRed()
+    {
+        _meshRenderer.material.color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        _meshRenderer.material.color = originalColor;
     }
 }

@@ -5,8 +5,11 @@ public class Enemy : MonoBehaviour
 {
     public Rigidbody Rb { private set; get; }
     [SerializeField] public PlayerController player;
-    [SerializeField] public float moveSpeed = 2;
-    [SerializeField] public float attackRange = 3;
+    [SerializeField] public float moveSpeed = 2f;
+    [SerializeField] public float attackRange = 3f;
+    [SerializeField] public float attackCooldown = 2f; //in seconds
+    [SerializeField] public float firstAttackCooldown = 0.5f;
+    [SerializeField] public float damageDealt = 1f;
     private EnemyStateMachine _enemyStateMachine;
     public ChasingEnemyState ChasingState;
     public WanderingEnemyState WanderingState;
@@ -25,5 +28,10 @@ public class Enemy : MonoBehaviour
     private void Update()
     {
         _enemyStateMachine.CurrentEnemyState.Update();
+    }
+    
+    public void LookAtPlayer()
+    {
+        transform.LookAt(player.transform);
     }
 }
