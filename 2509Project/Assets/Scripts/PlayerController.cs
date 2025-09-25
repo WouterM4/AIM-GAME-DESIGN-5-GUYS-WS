@@ -3,6 +3,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] public float maxHP = 3;
+    public float currentHP;
     public int movementSpeed;
     public Camera playerCamera;
     private Vector2 mousePosition;
@@ -11,6 +13,7 @@ public class PlayerController : MonoBehaviour
     
     void Start()
     { 
+        currentHP = maxHP;
         rb = GetComponent<Rigidbody>();
     }
     
