@@ -1,15 +1,14 @@
-using System;
 using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class MeteorController : PoolObject<MeteorController>
+public class MeteorController : PoolObject
 {
-    [SerializeField] private float displayTime = 5;
-    [SerializeField] private float minScale = 0.5f;
-    [SerializeField] private float maxScale = 2f;
-    [SerializeField] private float minSpeed = 0.5f;
-    [SerializeField] private float maxSpeed = 2f;
+    [SerializeField] private float displayTime = 20;
+    [SerializeField] private float minScale = 1;
+    [SerializeField] private float maxScale = 4;
+    [SerializeField] private float minSpeed = 1000;
+    [SerializeField] private float maxSpeed = 1500;
     private float _speed;
     private Coroutine _disableCoroutine;
     private Rigidbody _rigidbody;
@@ -17,22 +16,23 @@ public class MeteorController : PoolObject<MeteorController>
     
     void Start()
     {
+        _rigidbody = GetComponent<Rigidbody>();
         InvokeDespawnAfterDelay();
     }
 
-    public void Initialize(Vector3 playerDirection)
+    public void Initialize(Vector3 playerDir)
     {
         float scale = Random.Range(minScale, maxScale);
         transform.localScale = Vector3.one * scale;
+        playerDirection = playerDir;
         
         _speed = Random.Range(minSpeed, maxSpeed);
         
-        _rigidbody = GetComponent<Rigidbody>();
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
-        _rigidbody.AddForce(playerDirection * _speed);
+        _rigidbody.linearVelocity = transform.forward * _speed;
     }
 
     private void InvokeDespawnAfterDelay()
@@ -47,6 +47,6 @@ public class MeteorController : PoolObject<MeteorController>
     {
         yield return new WaitForSeconds(displayTime);
         gameObject.SetActive(false);
-        ReturnToPool();
+        _poolManager.ReturnToPool(this);
     }
 }

@@ -7,30 +7,34 @@ public class SpaceshipController : MonoBehaviour
     [SerializeField] private int maxSpeed = 100;
     [SerializeField] private int accelerationSpeed = 1;
     [SerializeField] private int turnSpeed = 10;
+    [SerializeField] private float torqueStrength = 10;
 
     private float horizontalRotation;
     private float verticalRotation;
     private float forwardMovementSpeed;
     private Rigidbody rb;
-
+    private Vector2 currentInput;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        rb.centerOfMass = Vector3.zero; // or a custom local offset
     }
 
     void FixedUpdate()
     {
-        rb.AddForce(transform.forward *    forwardMovementSpeed * Time.deltaTime);
+        rb.AddForce(transform.forward * forwardMovementSpeed * Time.deltaTime);
         Quaternion deltaRotation = Quaternion.Euler(new Vector3(verticalRotation, horizontalRotation, 0) * turnSpeed * Time.deltaTime);
         rb.MoveRotation(rb.rotation * deltaRotation);
+        
+        //rotation
+        Vector3 torque = new Vector3(-currentInput.y, currentInput.x, 0f) * torqueStrength;
+        rb.AddRelativeTorque(torque, ForceMode.Impulse);
     }
 
-    void OnMove(InputValue movementValue)
+    public void OnMove(InputValue movementValue)
     {
-        Vector2 movemementVector = movementValue.Get<Vector2>();
-        horizontalRotation = movemementVector.x;
-        verticalRotation = movemementVector.y;
+        currentInput = movementValue.Get<Vector2>();
     }
 
     void OnBoost()

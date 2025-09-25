@@ -1,16 +1,11 @@
 using UnityEngine;
 
-public abstract class PoolObject<T> : MonoBehaviour where T : PoolObject<T>
+public abstract class PoolObject : MonoBehaviour
 {
-    private PoolManager<T> _poolManager;
+    protected PoolManager _poolManager;
 
-    public void InitPoolObject(PoolManager<T> poolManager)
+    public void InitPoolObject(PoolManager poolManager)
     {
         _poolManager = poolManager;
-    }
-
-    protected void ReturnToPool()
-    {
-        _poolManager.ReturnToPool((T)this);
     }
 }
