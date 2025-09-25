@@ -459,6 +459,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2157076052793635597}
+  - component: {fileID: 8472344924887395794}
   m_Layer: 0
   m_Name: Ketel
   m_TagString: Untagged
@@ -486,6 +487,20 @@ Transform:
   - {fileID: 305299328974051431}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8472344924887395794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4769313320228243345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4a4a3475eaf80447b599e242f063fe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FillCauldron
+  totalItems: 1
+  potion: {fileID: 5989318735146870377, guid: 2e0cf936653afdb459bdaae60e54c3af, type: 3}
 --- !u!1 &4962043817562498810
 GameObject:
   m_ObjectHideFlags: 0
