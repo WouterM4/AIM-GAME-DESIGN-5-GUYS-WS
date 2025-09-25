@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     { 
         currentHP = maxHP;
         rb = GetComponent<Rigidbody>();
+        desiredLocation = new Vector3(transform.position.x, 1, transform.position.z);
     }
     
     void FixedUpdate()
