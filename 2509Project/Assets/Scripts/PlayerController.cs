@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(clickRay, out hit))
         {
-            Debug.DrawLine(playerCamera.transform.position, hit.point, Color.orange, 1);
+            // Debug.DrawLine(playerCamera.transform.position, hit.point, Color.orange, 1);
             desiredLocation = hit.point;
         }
     }

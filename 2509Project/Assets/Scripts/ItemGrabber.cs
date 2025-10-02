@@ -1,14 +1,39 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class ItemGrabbe : MonoBehaviour
+public class ItemGrabber : MonoBehaviour
 {
+    public Camera playerCamera;
+    private Vector2 mousePosition;
+    private Vector3 desiredLocation;
+    
     [SerializeField] private Transform slot;
 
     private PickableItem pickedItem;
 
     private void OnInteract()
     {
-        
+        Ray clickRay = playerCamera.ScreenPointToRay(mousePosition);
+        RaycastHit hit;
+        if (Physics.Raycast(clickRay, out hit))
+        {
+            
+            if (hit.collider.gameObject.tag.Equals("pickup"))
+            {
+                var pickable = hit.transform.GetComponent<PickableItem>();
+                PickItem(pickable);
+                Debug.Log("item found");
+            }
+
+            if (hit.collider.gameObject.tag.Equals("Disposable")
+                // && pickedItem != null
+                )
+            {
+                pickedItem.GameObject().SetActive(false);
+                Debug.Log("disposable found");
+            }
+            Debug.Log("Reached");
+        }
     }
     
     private void PickItem(PickableItem item)
