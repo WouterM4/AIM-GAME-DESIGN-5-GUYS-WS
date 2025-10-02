@@ -17,24 +17,23 @@ public class ItemGrabber : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(clickRay, out hit))
         {
-            var pickable = hit.transform.GetComponent<PickableItem>();
-
-            if (pickable)
+            
+            if (hit.collider.gameObject.tag.Equals("pickup"))
             {
-                Debug.Log("PickUp item:" + pickable);
+                var pickable = hit.transform.GetComponent<PickableItem>();
                 PickItem(pickable);
-                return;
+                Debug.Log("item found");
             }
 
             if (hit.collider.gameObject.tag.Equals("Disposable")
-                && pickedItem != null)
+                // && pickedItem != null
+                )
             {
                 pickedItem.GameObject().SetActive(false);
+                Debug.Log("disposable found");
             }
-            // Debug.DrawLine(playerCamera.transform.position, hit.point, Color.orange, 1);
-            // desiredLocation = hit.point;
+            Debug.Log("Reached");
         }
-        Debug.Log("interacted");
     }
     
     private void PickItem(PickableItem item)
