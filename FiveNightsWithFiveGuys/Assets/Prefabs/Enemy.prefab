@@ -178,6 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d45b918679834524f8a59d47fba4593b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
+  gameState: {fileID: 11400000, guid: a7bdc10bc231ea34f8367683e9568ffd, type: 2}
 --- !u!82 &1795925864067486941
 AudioSource:
   m_ObjectHideFlags: 0

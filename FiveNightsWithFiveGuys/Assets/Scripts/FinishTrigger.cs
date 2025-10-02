@@ -4,15 +4,15 @@ using UnityEngine.Serialization;
 
 public class FinishTrigger : MonoBehaviour
 {
-    [Tooltip("Assign the GameState asset.")]
-    public GameState gameState;
+    [SerializeField] private GameState gameState;
+    [SerializeField] private string playerTag = "Player";
+    [SerializeField] private GameObject victoryUI;
 
-    [Tooltip("UI Text or TMP Text object to display 'Victory' (optional).")]
-    public GameObject victoryUI; // set active on victory
-
-    [Tooltip("Optional UnityEvent for additional actions on victory.")]
-    public UnityEvent onVictory;
-
+    private void Start()
+    {
+        if (victoryUI != null) victoryUI.SetActive(false);
+    }
+    
     private void Reset()
     {
         var col = GetComponent<Collider>();
@@ -21,12 +21,10 @@ public class FinishTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // assume player has tag "Player"
-        if (other.CompareTag("Player") && gameState != null)
-        {
-            gameState.SetVictory();
-            if (victoryUI != null) victoryUI.SetActive(true);
-            onVictory?.Invoke();
-        }
+        if (gameState.IsVictory) return;
+        if (!other.CompareTag(playerTag)) return;
+        
+        gameState.SetVictory();
+        if (victoryUI != null) victoryUI.SetActive(true);
     }
 }
