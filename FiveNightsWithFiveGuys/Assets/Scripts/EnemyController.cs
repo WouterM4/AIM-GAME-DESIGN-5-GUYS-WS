@@ -5,6 +5,9 @@ public class EnemyController : MonoBehaviour
     private UnityEngine.AI.NavMeshAgent ai;
     private GameObject player;
     private AudioSource audioSource;
+
+    [SerializeField] private GameState gameState;
+    private bool isStopped = false;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,5 +25,28 @@ public class EnemyController : MonoBehaviour
         { 
             audioSource.Play();
         }
+    }
+    
+    private void OnEnable()
+    {
+        if (gameState != null) gameState.OnVictory += HandleVictory;
+    }
+
+    private void OnDisable()
+    {
+        if (gameState != null) gameState.OnVictory -= HandleVictory;
+    }
+    
+    private void HandleVictory()
+    {
+        isStopped = true;
+        
+        // additional stop logic: zero velocity, disable AI, animations etc.
+        var rb = GetComponent<Rigidbody>();
+        if (rb != null) rb.linearVelocity = Vector3.zero;
+        var cc = GetComponent<CharacterController>();
+        if (cc != null) { /* nothing needed; just stop moving in Update */ }
+        var animator = GetComponent<Animator>();
+        if (animator != null) animator.enabled = false;
     }
 }
