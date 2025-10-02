@@ -8,10 +8,10 @@ public class EnemyController : MonoBehaviour
 
     [SerializeField] private GameState gameState;
     private bool isStopped = false;
-    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
-    { 
+    {
         ai = GetComponent<UnityEngine.AI.NavMeshAgent>();
         player = GameObject.Find("Player");
         audioSource = GetComponent<AudioSource>();
@@ -20,33 +20,29 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (gameState.IsVictory) return;
+
         ai.destination = player.transform.position;
         if (ai.remainingDistance < 3f && !audioSource.isPlaying)
-        { 
+        {
             audioSource.Play();
         }
     }
     
     private void OnEnable()
     {
-        if (gameState != null) gameState.OnVictory += HandleVictory;
+        if (gameState != null) gameState.OnVictory += OnVictory;
     }
 
     private void OnDisable()
     {
-        if (gameState != null) gameState.OnVictory -= HandleVictory;
+        if (gameState != null) gameState.OnVictory -= OnVictory;
     }
-    
-    private void HandleVictory()
+
+    private void OnVictory()
     {
         isStopped = true;
-        
-        // additional stop logic: zero velocity, disable AI, animations etc.
-        var rb = GetComponent<Rigidbody>();
-        if (rb != null) rb.linearVelocity = Vector3.zero;
-        var cc = GetComponent<CharacterController>();
-        if (cc != null) { /* nothing needed; just stop moving in Update */ }
-        var animator = GetComponent<Animator>();
-        if (animator != null) animator.enabled = false;
+        if (ai != null) ai.isStopped = true; // stops movement
+        if (audioSource != null) audioSource.Stop(); // stop any sound
     }
 }
