@@ -13,26 +13,9 @@ public class ChasingEnemyState : EnemyState
 
     public override void Update()
     {
-        LookAtPlayer();
+        Enemy.LookAtPlayer();
         MoveTowardsPlayer();
         UpdateState();
-    }
-
-    private void MoveTowardsPlayer()
-    {
-        var newPos = Vector3.MoveTowards(Enemy.transform.position, Enemy.player.transform.position, Enemy.moveSpeed * Time.deltaTime);
-        Enemy.Rb.MovePosition(newPos);
-    }
-
-    private void LookAtPlayer()
-    {
-        Enemy.transform.LookAt(Enemy.player.transform);
-    }
-
-    private void UpdateState()
-    {
-        if (Vector3.Distance(Enemy.transform.position, Enemy.player.transform.position) > Enemy.attackRange) return;
-        EnemyStateMachine.SetState(Enemy.AttackingState);
     }
 
     public override void FixedUpdate()
@@ -43,5 +26,19 @@ public class ChasingEnemyState : EnemyState
     public override void Exit()
     {
         
+    }
+    
+    private void MoveTowardsPlayer()
+    {
+        var newPos = Vector3.MoveTowards(Enemy.transform.position, Enemy.player.transform.position, Enemy.moveSpeed * Time.deltaTime);
+        Enemy.Rb.MovePosition(newPos);
+    }
+
+    
+
+    private void UpdateState()
+    {
+        if (Vector3.Distance(Enemy.transform.position, Enemy.player.transform.position) > Enemy.attackRange) return;
+        EnemyStateMachine.SetState(Enemy.AttackingState);
     }
 }
