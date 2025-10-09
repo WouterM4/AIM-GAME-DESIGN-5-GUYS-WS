@@ -12,11 +12,12 @@ Challenge, Fellowship(?)
 ## Features
 
 ### Must 
+
 - [ ] Implement A nighttime
 - [ ] Implement patrolling Teachers: Lucas
 - [ ] Implement a player: Julian, Akram
 - [ ] Implement the map: Jon, Wouter, Lena
-- [ ] Implement a pickup logic: Barend.
+- [ ] Implement a pickup logic: Barend
 - [ ] Implement the secret
 
 - [x] Multiplayer: Wouter, Bram,
