@@ -13,11 +13,11 @@ Challenge, Fellowship(?)
 
 ### Must
 
-- [ ] Implement A nighttime
-- [ ] Implement patrolling Teachers: Lucas
-- [ ] Implement a player: Julian, Akram
+- [x] Implement A nighttime
+- [x] Implement patrolling Teachers: Lucas
+- [x] Implement a player: Julian, Akram
 - [ ] Implement the map: Jon, Wouter, Lena
-- [ ] Implement a pickup logic: Barend
+- [x] Implement a pickup logic: Barend
 - [ ] Implement key use: Bram
 - [ ] Implement the secret
 
