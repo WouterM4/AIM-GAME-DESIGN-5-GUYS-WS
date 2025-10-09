@@ -8,7 +8,6 @@ public class PickUpKey : MonoBehaviour
     [SerializeField] private GameObject keyHolder;
     [SerializeField] private GameObject key;
     [SerializeField] private float throwForce = 15f;
-
     private void OnTriggerEnter(Collider other)
     {
         if (!other.gameObject.CompareTag("Key")) return;

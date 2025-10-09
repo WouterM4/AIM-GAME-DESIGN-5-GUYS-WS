@@ -1,14 +1,15 @@
 using System;
 using UnityEngine;
 
-public class ColoredObject : MonoBehaviour
+public class Key : MonoBehaviour
 {
-    [SerializeField] private Color _color;
     private Renderer _renderer;
+    [SerializeField] private KeyColors color;
+
 
     private void Start()
     {
         _renderer = GetComponent<Renderer>();
-        _renderer.material.color = _color;
+        _renderer.material.color = color.Color;
     }
 }
