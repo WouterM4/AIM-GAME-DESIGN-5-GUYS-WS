@@ -7,10 +7,11 @@ public class PickUpKey : MonoBehaviour
     public bool hasKey = false;
     [SerializeField] private GameObject keyHolder;
     [SerializeField] private GameObject key;
+    [SerializeField] private float throwForce = 15f;
 
     private GameObject _heldKeyInstance;
-    
-    private void OnTriggerEnter(Collider other)
+
+    private void OnCollisionEnter(Collision other)
     {
         if (!other.gameObject.CompareTag("Key")) return;
         if (hasKey) return;
@@ -22,8 +23,22 @@ public class PickUpKey : MonoBehaviour
         
         Destroy(other.gameObject);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+    }
     
-    public void OnAttack()
+    public void OnPrevious()
+    {
+        throwKey(0f);
+    }
+
+    public void OnNext()
+    {
+        throwKey(throwForce);
+    }
+
+    private void throwKey(float force)
     {
         if (hasKey && _heldKeyInstance != null)
         {
@@ -31,7 +46,9 @@ public class PickUpKey : MonoBehaviour
             Vector3 dropPosition = transform.position + transform.forward * 1.5f;
             Quaternion dropRotation = Quaternion.identity;
 
-            Instantiate(key, dropPosition, dropRotation);
+            GameObject spawnedKey = Instantiate(key, dropPosition, dropRotation);
+            
+            spawnedKey.GetComponent<Rigidbody>().AddForce(transform.forward * force);
             
             Destroy(_heldKeyInstance);
             _heldKeyInstance = null;
