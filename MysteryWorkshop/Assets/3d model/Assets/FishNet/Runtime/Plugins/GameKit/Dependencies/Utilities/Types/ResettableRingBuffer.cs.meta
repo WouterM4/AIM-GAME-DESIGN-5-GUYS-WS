@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 389d2054c5493654694b3cc07bab3d3a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207815
+  packageName: 'FishNet: Networking Evolved'
+  packageVersion: 4.6.12R
+  assetPath: Assets/FishNet/Runtime/Plugins/GameKit/Dependencies/Utilities/Types/ResettableRingBuffer.cs
+  uploadId: 773595

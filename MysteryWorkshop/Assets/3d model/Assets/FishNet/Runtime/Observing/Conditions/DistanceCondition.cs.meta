@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 3eec3a563cc82c348b25cd1abb3a0645
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207815
+  packageName: 'FishNet: Networking Evolved'
+  packageVersion: 4.6.12R
+  assetPath: Assets/FishNet/Runtime/Observing/Conditions/DistanceCondition.cs
+  uploadId: 773595

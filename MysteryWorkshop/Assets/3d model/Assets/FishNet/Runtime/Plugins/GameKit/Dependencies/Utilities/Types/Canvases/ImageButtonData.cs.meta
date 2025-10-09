@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: b0940863d715ce0458eeb526e2fdbf2e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207815
+  packageName: 'FishNet: Networking Evolved'
+  packageVersion: 4.6.12R
+  assetPath: Assets/FishNet/Runtime/Plugins/GameKit/Dependencies/Utilities/Types/Canvases/ImageButtonData.cs
+  uploadId: 773595

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: dbc2829f8b0d2e74bb135fcfe464e76a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207815
+  packageName: 'FishNet: Networking Evolved'
+  packageVersion: 4.6.12R
+  assetPath: Assets/FishNet/Runtime/Observing/Conditions/ScriptableObjects/OwnerOnlyCondition.asset
+  uploadId: 773595

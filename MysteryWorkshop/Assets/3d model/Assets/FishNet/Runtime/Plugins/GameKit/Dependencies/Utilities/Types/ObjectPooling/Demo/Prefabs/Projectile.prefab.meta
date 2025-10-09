@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1f1f4083801798f4d91b1856ee2519ca
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207815
+  packageName: 'FishNet: Networking Evolved'
+  packageVersion: 4.6.12R
+  assetPath: Assets/FishNet/Runtime/Plugins/GameKit/Dependencies/Utilities/Types/ObjectPooling/Demo/Prefabs/Projectile.prefab
+  uploadId: 773595

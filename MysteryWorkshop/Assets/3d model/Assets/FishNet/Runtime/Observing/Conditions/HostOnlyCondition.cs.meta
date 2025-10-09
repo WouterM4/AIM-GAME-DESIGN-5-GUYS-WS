@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 15204699d1a223a46ad59e2e669e5916
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207815
+  packageName: 'FishNet: Networking Evolved'
+  packageVersion: 4.6.12R
+  assetPath: Assets/FishNet/Runtime/Observing/Conditions/HostOnlyCondition.cs
+  uploadId: 773595

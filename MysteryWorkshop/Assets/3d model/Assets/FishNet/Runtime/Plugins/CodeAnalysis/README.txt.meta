@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 339ea8a4e069fbe4aafae7ca206f5793
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207815
+  packageName: 'FishNet: Networking Evolved'
+  packageVersion: 4.6.12R
+  assetPath: Assets/FishNet/Runtime/Plugins/CodeAnalysis/README.txt
+  uploadId: 773595

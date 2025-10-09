@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 258c44f3083a4c94ea447b5018113c02
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207815
+  packageName: 'FishNet: Networking Evolved'
+  packageVersion: 4.6.12R
+  assetPath: Assets/FishNet/Runtime/Plugins/ColliderRollback/LICENSE.txt
+  uploadId: 773595

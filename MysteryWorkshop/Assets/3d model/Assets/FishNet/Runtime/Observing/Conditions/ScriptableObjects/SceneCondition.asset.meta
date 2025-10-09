@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c415a60d16a33ec42bf22ba92afecdab
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207815
+  packageName: 'FishNet: Networking Evolved'
+  packageVersion: 4.6.12R
+  assetPath: Assets/FishNet/Runtime/Observing/Conditions/ScriptableObjects/SceneCondition.asset
+  uploadId: 773595

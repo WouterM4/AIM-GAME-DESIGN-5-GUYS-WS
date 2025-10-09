@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: aa3e270796d186c4faf7ba19e1f1100f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207815
+  packageName: 'FishNet: Networking Evolved'
+  packageVersion: 4.6.12R
+  assetPath: Assets/FishNet/Runtime/Observing/Conditions/GridCondition/HashGrid.cs
+  uploadId: 773595
