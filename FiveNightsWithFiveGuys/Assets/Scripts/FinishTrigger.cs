@@ -22,7 +22,7 @@ public class FinishTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (gameState.IsVictory) return;
-        if (!other == GameObject.Find("Player")) return;
+        if (!other.CompareTag(playerTag)) return;
         
         gameState.SetVictory();
         if (victoryUI != null) victoryUI.SetActive(true);

@@ -11,22 +11,21 @@ Challenge, Fellowship(?)
 
 ## Features
 
-### Must 
+### Must
+
 - [ ] Implement A nighttime
-- [ ] Implement patrolling Teachers
-Lucas
+- [ ] Implement patrolling Teachers: Lucas
 - [ ] Implement a player: Julian, Akram
 - [ ] Implement the map: Jon, Wouter, Lena
-- [ ] Implement a pickup logic: Barend.
+- [ ] Implement a pickup logic: Barend
+- [ ] Implement key use: Bram
 - [ ] Implement the secret
 
-- [ ] Multiplayer: Wouter, Bram,
-- [ ] Implement the flashlight.
-- [ ] Time constraint for doing something alone. After the limit, two people arae needed for a task.
+- [x] Multiplayer: Wouter, Bram
+- [ ] Implement the flashlight: Akram
+- [ ] Time constraint for doing something alone. After the limit, two people area needed for a task.
 
 ### Could
 
 - [ ] Somebody could play as a teacher
 - [ ] Camera to instantly alert all teachers
-
-
