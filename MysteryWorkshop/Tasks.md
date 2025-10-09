@@ -10,25 +10,23 @@ Multiplayer, teachers and students are playable.
 Challenge, Fellowship(?)
 
 ## Features
-[] Implement A nighttime
-[] Implement patrolling Teachers
+
+### Must 
+- [ ] Implement A nighttime
+- [ ] Implement patrolling Teachers
 Lucas
-[] Implement a player'
-	Kinematic controller?
-Julian, Akram
-[] Implement the map
-Jon, Wouter, Lena
-[] Implement a pickup logic
-[] Implement the secret
+- [ ] Implement a player: Julian, Akram
+- [ ] Implement the map: Jon, Wouter, Lena
+- [ ] Implement a pickup logic
+- [ ] Implement the secret
 
-[] Multiplayer
-Wouter, Bram,
-[] Implement the flashlight.
-[] Time constraint for doing something alone. 
-	After the limit, two people arae needed for a task.
+- [ ] Multiplayer: Wouter, Bram,
+- [ ] Implement the flashlight.
+- [ ] Time constraint for doing something alone. After the limit, two people arae needed for a task.
 
-COULD
-[] Somebody could play as a teacher
-[] Camera to instantly alert all teachers
+### Could
+
+- [ ] Somebody could play as a teacher
+- [ ] Camera to instantly alert all teachers
 
 
