@@ -17,7 +17,7 @@ Challenge, Fellowship(?)
 Lucas
 - [ ] Implement a player: Julian, Akram
 - [ ] Implement the map: Jon, Wouter, Lena
-- [ ] Implement a pickup logic
+- [ ] Implement a pickup logic: Barend.
 - [ ] Implement the secret
 
 - [ ] Multiplayer: Wouter, Bram,
