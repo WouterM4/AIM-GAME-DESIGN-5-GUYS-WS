@@ -15,4 +15,4 @@ There are always two students needed to play the game.
 Maybe
 when the secret is found the game turn into Tag. And only one player can win.
 
-FIRST PERSON
+The game will have a Top down perspective
