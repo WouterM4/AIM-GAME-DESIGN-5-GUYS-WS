@@ -243,6 +243,80 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3105136437542465991, guid: 08bda47e267044d49ab1e525c6a4126a, type: 3}
   m_PrefabInstance: {fileID: 289877005349100793}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6987311685331415685
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4349667629317049397}
+    m_Modifications:
+    - target: {fileID: 5758682336575911623, guid: 4c40ae250a38b6840b3e8e9807f1f51b, type: 3}
+      propertyPath: m_Name
+      value: walls
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869399261145487252, guid: 4c40ae250a38b6840b3e8e9807f1f51b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.6133195
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869399261145487252, guid: 4c40ae250a38b6840b3e8e9807f1f51b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.6133195
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869399261145487252, guid: 4c40ae250a38b6840b3e8e9807f1f51b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.6133195
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869399261145487252, guid: 4c40ae250a38b6840b3e8e9807f1f51b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -23.494839
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869399261145487252, guid: 4c40ae250a38b6840b3e8e9807f1f51b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869399261145487252, guid: 4c40ae250a38b6840b3e8e9807f1f51b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -31.132332
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869399261145487252, guid: 4c40ae250a38b6840b3e8e9807f1f51b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869399261145487252, guid: 4c40ae250a38b6840b3e8e9807f1f51b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869399261145487252, guid: 4c40ae250a38b6840b3e8e9807f1f51b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869399261145487252, guid: 4c40ae250a38b6840b3e8e9807f1f51b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869399261145487252, guid: 4c40ae250a38b6840b3e8e9807f1f51b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869399261145487252, guid: 4c40ae250a38b6840b3e8e9807f1f51b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869399261145487252, guid: 4c40ae250a38b6840b3e8e9807f1f51b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4c40ae250a38b6840b3e8e9807f1f51b, type: 3}
+--- !u!4 &3567872844272051473 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5869399261145487252, guid: 4c40ae250a38b6840b3e8e9807f1f51b, type: 3}
+  m_PrefabInstance: {fileID: 6987311685331415685}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7342676072739655043
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -335,6 +409,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6465888503092543926, guid: 0c830e8c489378c4f883fba645b705ba, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6011045585969410485}
+    - targetCorrespondingSourceObject: {fileID: 6465888503092543926, guid: 0c830e8c489378c4f883fba645b705ba, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3567872844272051473}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c830e8c489378c4f883fba645b705ba, type: 3}
 --- !u!4 &4349667629317049397 stripped
