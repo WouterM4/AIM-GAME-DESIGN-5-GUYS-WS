@@ -13,15 +13,14 @@ Challenge, Fellowship(?)
 
 ### Must 
 - [ ] Implement A nighttime
-- [ ] Implement patrolling Teachers
-Lucas
+- [ ] Implement patrolling Teachers: Lucas
 - [ ] Implement a player: Julian, Akram
 - [ ] Implement the map: Jon, Wouter, Lena
 - [ ] Implement a pickup logic: Barend.
 - [ ] Implement the secret
 
-- [ ] Multiplayer: Wouter, Bram,
-- [ ] Implement the flashlight.
+- [x] Multiplayer: Wouter, Bram,
+- [ ] Implement the flashlight: Akram
 - [ ] Time constraint for doing something alone. After the limit, two people arae needed for a task.
 
 ### Could
