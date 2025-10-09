@@ -1,0 +1,47 @@
+{
+    "version": 1,
+    "name": "flashLight",
+    "maps": [
+        {
+            "name": "player",
+            "id": "d6bd2ab8-8897-41f9-a7b5-97d2d193e8ea",
+            "actions": [
+                {
+                    "name": "Flash",
+                    "type": "Button",
+                    "id": "584dc007-2b23-4bbf-a813-eed8bd4ee552",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "bc188d6d-968f-4d2d-bec9-1afec095417c",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Flash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "keyboard",
+            "bindingGroup": "keyboard",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
