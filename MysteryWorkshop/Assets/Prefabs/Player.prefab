@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: FishNet.Runtime::FishNet.Object.NetworkObject
   <IsNested>k__BackingField: 0
-  WasActiveDuringEdit: 0
+  WasActiveDuringEdit: 1
   WasActiveDuringEdit_Set1: 1
   <ComponentIndex>k__BackingField: 0
   <PredictedSpawn>k__BackingField: {fileID: 0}
@@ -294,7 +294,7 @@ MonoBehaviour:
   _componentIndexCache: 2
   _addedNetworkObject: {fileID: 1638553427753364321}
   _networkObjectCache: {fileID: 1638553427753364321}
-  cinemachineCamera: {fileID: 0}
+  cinemachineCamera: {fileID: 9051207876434567510}
 --- !u!114 &7974121217111011341
 MonoBehaviour:
   m_ObjectHideFlags: 0
