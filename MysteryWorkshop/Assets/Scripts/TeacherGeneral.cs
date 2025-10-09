@@ -29,6 +29,7 @@ namespace DefaultNamespace
         private void Update()
         {
             _stateMachine.CurrentState.Update();
+            Debug.Log(_stateMachine.CurrentState);
         }
 
         private void LateUpdate()

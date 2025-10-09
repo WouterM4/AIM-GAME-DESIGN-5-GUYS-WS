@@ -8,7 +8,9 @@
 
         public override void Update()
         {
-            Teacher.TeacherBehaviour.MoveTo(Teacher.TeacherBehaviour.CurrentTarget.position);
+            if (!Teacher.TeacherBehaviour.SeePlayer(Teacher.TeacherBehaviour.CurrentTarget)) StateMachine.SetState(Teacher.States.PatrollingState);
+            if (Teacher.TeacherBehaviour.TargetInRange()) StateMachine.SetState(Teacher.States.AttackingState);
+            Teacher.TeacherBehaviour.MoveTo(Teacher.TeacherBehaviour.CurrentTarget.transform.position);
         }
         
     }
