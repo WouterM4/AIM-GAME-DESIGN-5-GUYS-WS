@@ -1,19 +1,16 @@
 using FishNet.Object;
+using Unity.Cinemachine;
 using UnityEngine;
 
-// This script will be a NetworkBehaviour so that we can use the 
-// OnStartClient override.
+// This script will be a NetworkBehaviour so that we can use the OnStartClient override.
 public class PlayerCamera : NetworkBehaviour
 {
-    [SerializeField] private Camera cameraPrefab;
-    [SerializeField] private Transform cameraHolder;
+    [SerializeField] private CinemachineCamera cinemachineCamera;
 
-    // This method will run on the client once this object is spawned.
+    // This method is called on the client after the object is spawned in.
     public override void OnStartClient()
     {
-        // Since this will run on all clients that this object spawns for
-        // we need to only instantiate the camera for the object we own.
-        if (IsOwner)
-            Instantiate(cameraPrefab, cameraHolder.position, cameraHolder.rotation, cameraHolder);
+        // Simply enable our local cinemachine camera on the object if we are the owner.
+        cinemachineCamera.enabled = IsOwner;
     }
 }
