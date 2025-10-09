@@ -13,5 +13,12 @@ MonoBehaviour:
   m_Name: TeacherMovementData
   m_EditorClassIdentifier: Assembly-CSharp::ScriptableObjects.TeacherMovementData
   movementSpeed: 0
-  patrolPoints: []
   returnViaRoute: 0
+  viewDistance: 10
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  viewAngle: 100
+  attackRange: 3
+  attackCooldown: 2
+  attackDamage: 0
